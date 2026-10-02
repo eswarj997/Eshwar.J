@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eswar J | Technical Lead & Senior Design Engineer</title>
+<style>
+:root{
+  --bg:#f4f6f8;--card:#ffffff;--ink:#14202b;--muted:#62707c;
+  --accent:#0b5cad;--accent2:#123a63;--line:#dce3e9;
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:0;z-index:10;background:rgba(20,32,43,.97);color:#fff;box-shadow:0 3px 18px #0002}
+.nav{max-width:1200px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px}
+.logo{font-weight:800;letter-spacing:.5px}
+.navlinks{display:flex;gap:8px;flex-wrap:wrap}
+.navlinks a{padding:8px 12px;border-radius:8px;font-size:14px;color:#eaf2f8}
+.navlinks a:hover{background:#ffffff18}
+.hero{background:linear-gradient(135deg,#102b44,#1c5b8d);color:white;padding:82px 22px 72px}
+.hero-inner{max-width:1200px;margin:auto}
+.eyebrow{font-size:13px;letter-spacing:2px;text-transform:uppercase;opacity:.82}
+h1{font-size:clamp(38px,6vw,70px);margin:8px 0 4px;line-height:1}
+.hero h2{font-size:clamp(20px,3vw,30px);font-weight:500;margin:12px 0}
+.hero p{max-width:780px;color:#e3edf5;font-size:17px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-block;padding:12px 18px;border-radius:9px;border:1px solid #ffffff55;background:#ffffff12}
+.btn.primary{background:white;color:#123a63;border-color:white;font-weight:700}
+main{max-width:1200px;margin:auto;padding:45px 22px}
+section{scroll-margin-top:90px;margin-bottom:55px}
+.section-title{font-size:30px;margin:0 0 18px;color:var(--accent2)}
+.section-title:after{content:"";display:block;width:58px;height:3px;background:var(--accent);margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:25px;box-shadow:0 8px 25px #102b4410}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.strength{padding:20px;border-left:4px solid var(--accent);background:#fff;border-radius:12px;border:1px solid var(--line)}
+.strength h3{margin:0 0 8px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tag{padding:7px 11px;background:#edf4fa;border-radius:999px;color:#164b75;font-size:14px}
+.timeline{position:relative;margin-left:10px;padding-left:25px;border-left:2px solid #c9d7e3}
+.job{position:relative;margin-bottom:28px}
+.job:before{content:"";position:absolute;left:-32px;top:7px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:3px solid var(--bg)}
+.job h3{margin:0;font-size:20px}
+.meta{color:var(--muted);font-size:14px;margin:3px 0 10px}
+.job ul{margin:8px 0 0;padding-left:20px}
+details{background:#fff;border:1px solid var(--line);border-radius:12px;margin:10px 0;overflow:hidden}
+summary{cursor:pointer;padding:16px 18px;font-weight:700}
+details .inside{padding:0 18px 18px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.contact{padding:20px;background:#fff;border:1px solid var(--line);border-radius:14px}
+.contact small{display:block;color:var(--muted);margin-bottom:4px}
+footer{background:#14202b;color:#dbe5ec;text-align:center;padding:25px}
+.visual-hero{margin-top:28px;border-radius:18px;overflow:hidden;border:1px solid #ffffff22;box-shadow:0 18px 45px #0004;background:#0b1f31}.visual-hero img{width:100%;height:330px;object-fit:cover;display:block}.visual-caption{padding:10px 14px;font-size:12px;color:#b9cad8;background:#0b1f31}.visual-caption a{color:#dbeaf6;text-decoration:underline}.visual-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.visual-card{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 8px 25px #102b4410}.visual-card img{width:100%;height:240px;object-fit:cover;display:block}.visual-card .vbody{padding:18px}.visual-card h3{margin:0 0 6px}.visual-card p{margin:0;color:var(--muted);font-size:14px}.image-note{font-size:12px;color:var(--muted);margin-top:10px}.image-note a{text-decoration:underline;color:var(--accent)}
+@media(max-width:760px){
+ .nav{align-items:flex-start;gap:10px;flex-direction:column}
+ .navlinks{overflow:auto;width:100%;flex-wrap:nowrap}
+ .grid,.contact-grid{grid-template-columns:1fr}
+ .hero{padding-top:55px}
+}
+
+/* Executive portfolio polish */
+:root{
+  --bg:#f5f7fa;--card:#ffffff;--ink:#172330;--muted:#657381;
+  --accent:#0b5cad;--accent2:#102f4d;--line:#d9e2ea;
+  --soft:#eef4f8;--shadow:0 12px 32px rgba(16,47,77,.08);
+}
+body{font-size:16px;letter-spacing:.05px}
+header{backdrop-filter:blur(10px)}
+.nav{max-width:1240px}
+.logo{font-size:16px}
+.navlinks a{transition:.2s ease}
+.navlinks a:hover{transform:translateY(-1px)}
+.hero{position:relative;overflow:hidden;padding:92px 22px 82px}
+.hero:after{content:"";position:absolute;right:-120px;top:-160px;width:430px;height:430px;border:1px solid #ffffff22;border-radius:50%;box-shadow:0 0 0 70px #ffffff08,0 0 0 140px #ffffff05}
+.hero-inner{position:relative;z-index:1}
+.eyebrow{font-weight:700}
+.hero p{line-height:1.8}
+main{max-width:1240px;padding:58px 22px}
+section{margin-bottom:68px}
+.section-title{font-size:31px;font-weight:800;letter-spacing:-.4px}
+.card,.strength,.contact{box-shadow:var(--shadow);transition:transform .2s ease,box-shadow .2s ease}
+.card:hover,.strength:hover,.contact:hover{transform:translateY(-2px);box-shadow:0 16px 38px rgba(16,47,77,.11)}
+.strength{border-left:4px solid var(--accent)}
+.strength h3,.card h3{color:var(--accent2)}
+.timeline{border-left:2px solid #c8d6e1}
+.job:before{box-shadow:0 0 0 4px #eaf2f8}
+details{box-shadow:var(--shadow)}
+details summary{background:#fff;transition:background .2s ease}
+details[open] summary{background:#f4f8fb;color:var(--accent2)}
+details .inside{line-height:1.72}
+.tag{border:1px solid #d8e5ef;background:#f2f7fb}
+.contact{transition:.2s ease}
+.caterpillar-visual img,.john-deere-visual img,.yanmar-visual img{transition:transform .3s ease}
+.caterpillar-visual a:hover img,.john-deere-visual a:hover img,.yanmar-visual a:hover img{transform:scale(1.01)}
+footer{padding:34px 22px}
+@media(max-width:900px){.navlinks a{font-size:13px;padding:7px 9px}.hero{padding:72px 22px}}
+
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#top">ESWAR J</a>
+    <div class="navlinks">
+      <a href="#snapshot">Snapshot</a><a href="#profile">Profile</a>
+      <a href="#strengths">Strengths</a><a href="#capabilities">Capabilities</a><a href="#project-focus">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#caterpillar">Caterpillar</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+</header>
+
+<div id="top" class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">Automotive • Marine Diesel • Product Design & Development</div>
+    <h1>Eswar J</h1>
+    <h2>Technical Lead | Senior Design Engineer</h2>
+    <p>Technical Lead / Senior Design Engineer with 7+ years of experience spanning product design and development, heavy engineering, CAD modeling and manufacturing-oriented engineering. Professional exposure includes marine diesel engines, drivetrain and gearbox systems, castings, sheet-metal, plastics and machine assemblies.</p>
+    
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="#experience">View Experience</a>
+      <a class="btn" href="#contact">Contact</a>
+    <div class="hero-status" style="margin-top:18px;font-size:13px;color:#d6e5f0;">7+ Years Experience&nbsp; • &nbsp;Product Design & Development&nbsp; • &nbsp;CAD & Manufacturing Engineering</div>
+  </div>
+</div>
+
+<main>
+
+<section id="snapshot">
+  <h2 class="section-title">Professional Snapshot</h2>
+  <div class="grid">
+    <div class="card"><h3>Primary Role</h3><p>Technical Lead / Senior Design Engineer</p></div>
+    <div class="card"><h3>Engineering Domains</h3><p>Automotive • Marine Diesel • Product Design & Development</p></div>
+    <div class="card"><h3>Design Environment</h3><p>Creo 2.0 / 4.0 / 7.0 • Pro-E • CATIA V5</p></div>
+    <div class="card"><h3>PLM / Engineering Systems</h3><p>Teamcenter • Windchill • Engineering change and release support</p></div>
+  </div>
+</section>
+
+<section id="profile">
+  <h2 class="section-title">Executive Profile</h2>
+  <div class="card">
+    <p>Current HCLTech project exposure covers Yanmar marine diesel engine platforms V12, V16 and V20, with responsibilities spanning concept design, casting design development, CAD models, engineering changes, drawing and BOM updates, design reviews, technical coordination, customer interaction and delivery tracking.</p>
+    <p>Earlier experience includes John Deere and Caterpillar programs involving drivetrain, gearbox, engine, casting, sheet-metal and plastic components.</p>
+  </div>
+</section>
+
+<section id="strengths">
+  <h2 class="section-title">Leadership & Technical Strengths</h2>
+  <div class="grid">
+    <div class="strength"><h3>Technical Leadership</h3><div class="tags"><span class="tag">Design reviews</span><span class="tag">Technical guidance</span><span class="tag">Team mentoring</span><span class="tag">Cross-functional coordination</span></div></div>
+    <div class="strength"><h3>Product Design</h3><div class="tags"><span class="tag">Concept design</span><span class="tag">3D CAD</span><span class="tag">Part & assembly modeling</span><span class="tag">Reverse engineering</span></div></div>
+    <div class="strength"><h3>Manufacturing</h3><div class="tags"><span class="tag">Casting</span><span class="tag">Forging</span><span class="tag">Sheet metal</span><span class="tag">Plastics</span><span class="tag">Machining</span><span class="tag">Injection molding</span></div></div>
+    <div class="strength"><h3>Engineering</h3><div class="tags"><span class="tag">GD&T</span><span class="tag">Tolerance stack-up</span><span class="tag">DFM/DFA</span><span class="tag">Feasibility</span><span class="tag">Production drawings</span></div></div>
+    <div class="strength"><h3>Program Support</h3><div class="tags"><span class="tag">Engineering changes</span><span class="tag">BOMs</span><span class="tag">Drawing release</span><span class="tag">Supplier/foundry coordination</span></div></div>
+    <div class="strength"><h3>CAD / PLM</h3><div class="tags"><span class="tag">Creo 2.0 / 4.0 / 7.0</span><span class="tag">Pro-E</span><span class="tag">CATIA V5</span><span class="tag">Teamcenter</span><span class="tag">Windchill</span></div></div>
+  </div>
+  </div>
+    </article>
+    <article class="visual-card">
+      
+      <div class="vbody"><h3>Heavy Engineering</h3><p>Public-domain diesel-engine photograph supporting the heavy-engineering and manufacturing visual language.</p></div>
+    </article>
+  </div>
+</section>
+
+
+<section id="capabilities">
+  <h2 class="section-title">Core Engineering Capabilities</h2>
+  <div class="grid">
+    <div class="strength"><h3>Concept to Production</h3><p>Concept design, 3D CAD development, feasibility studies, manufacturing drawings, engineering changes, drawing release and BOM support.</p></div>
+    <div class="strength"><h3>Heavy Engineering</h3><p>Experience across marine diesel engines, drivetrain and gearbox systems, castings, forgings, sheet-metal, plastics and machine assemblies.</p></div>
+    <div class="strength"><h3>Design for Manufacturing</h3><p>DFM/DFA, casting manufacturability, tolerance considerations, supplier/foundry coordination and production-oriented design support.</p></div>
+    <div class="strength"><h3>Engineering Documentation</h3><p>Production drawings, GD&T, BOMs, ECNs, Notices of Revision, deviation-request drawings and supplier-print detailing.</p></div>
+  </div>
+</section>
+
+<section id="project-focus">
+  <h2 class="section-title">Project & Domain Focus</h2>
+  <div class="grid">
+    <div class="card"><h3>Yanmar Marine Diesel Engines</h3><p>Conceptual design and development support for V12, V16 and V20 marine diesel engine platforms, including casting design development, engineering changes, CAD models, drawings, BOMs, design reviews and customer coordination.</p>
+<div class="card yanmar-visual" style="margin-top:18px;padding:14px;">
+  <a href="https://www.yanmar.com/global/about/technology/technical_review/2025/02_02.html" target="_blank" rel="noopener">
+    <img src="https://www.yanmar.com/ltc/global/about/technology/technical_review/2025/img/6c12a7e4ba/img_02_02_04.png"
+         alt="YANMAR 12GY175L engine technical reference"
+         style="width:100%;max-height:430px;object-fit:contain;border-radius:10px;display:block;background:#f4f6f8;">
+  </a>
+  <div style="padding:10px 4px 2px;font-size:12px;color:#62707c;">
+    Technical reference image: YANMAR Technical Review • 12GY175L GY175 Next-Generation High-Speed V-Type Diesel Engine •
+    <a href="https://www.yanmar.com/global/about/technology/technical_review/2025/02_02.html"
+       target="_blank" rel="noopener" style="color:#0b5cad;text-decoration:underline;">Official YANMAR source</a>
+  </div>
+</div>
+
+</div>
+    <div class="card"><h3>John Deere Program</h3><p>Concept design and modeling for casting components and gearbox systems, including shafts, pinions, gears, cast-iron housings, differential-case concepts and drivetrain components.</p>
+<div class="card john-deere-visual" style="margin-top:18px;padding:14px;">
+  <a href="https://commons.wikimedia.org/wiki/File:John_Deere_7920_mit_gleisbauspezifischen_Anbauger%C3%A4ten.jpg" target="_blank" rel="noopener"><img src="https://upload.wikimedia.org/wikipedia/commons/f/fc/John_Deere_7920_mit_gleisbauspezifischen_Anbauger%C3%A4ten.jpg"
+       alt="John Deere 7920 tractor with railway construction attachments"
+       style="width:100%;max-height:430px;object-fit:cover;border-radius:10px;display:block;"></a>
+  <div style="padding:10px 4px 2px;font-size:12px;color:#62707c;">
+    Image: JoachimKohler-HB / Wikimedia Commons •
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"
+       style="color:#0b5cad;text-decoration:underline;">CC BY-SA 4.0</a> •
+    <a href="https://en.wikipedia.org/wiki/File:John_Deere_7920_mit_gleisbauspezifischen_Anbauger%C3%A4ten.jpg"
+       target="_blank" rel="noopener" style="color:#0b5cad;text-decoration:underline;">Source</a>
+  </div>
+</div>
+
+</div>
+    <div class="card"><h3>Caterpillar EDCI</h3><p>Design and detailing exposure covering engine and machine assemblies, castings, sheet-metal and plastic components, support brackets, flywheel housing, drive groups, cooling-system components and related engineering documentation.</p></div>
+    <div class="card"><h3>Tool & Die / Manufacturing</h3><p>Manufacturing-oriented experience involving die molds, electrodes, CTQ lists, CMM inspection support, reverse engineering, mold troubleshooting, fixtures, inspection and tool trials.</p></div>
+  </div>
+</section>
+
+<section id="workflow">
+  <h2 class="section-title">Engineering Workflow</h2>
+  <div class="card">
+    <div class="tags">
+      <span class="tag">Concept & Requirements</span><span class="tag">3D CAD Modeling</span>
+      <span class="tag">Design Feasibility</span><span class="tag">DFM / DFA</span>
+      <span class="tag">GD&T & Drawings</span><span class="tag">BOM / ECN</span>
+      <span class="tag">Design Review</span><span class="tag">Supplier / Foundry Coordination</span>
+      <span class="tag">Validation & Issue Resolution</span><span class="tag">Release & Delivery Tracking</span>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2 class="section-title">Professional Experience</h2>
+  <div class="timeline">
+
+    <details open class="job">
+      <summary>HCLTech — Technical Lead</summary>
+      <div class="inside">
+        <div class="meta">06-Jan-2025 – Present • Project C266436 | Yanmar Marine Diesel Engines • Bengaluru, India • CAD / engineering support</div>
+        <p><strong>Project Scope:</strong> Conceptual design and development support for Yanmar V12, V16 and V20 marine diesel engine platforms.</p>
+        <ul>
+          <li>Support concept design and development activities for V12, V16 and V20 marine diesel engine platforms.</li>
+          <li>Lead and coordinate casting design development, design reviews and engineering change activities.</li>
+          <li>Create and modify 3D CAD models, assemblies and manufacturing drawings in accordance with customer requirements.</li>
+          <li>Perform design feasibility studies and provide technical solutions during concept-development activities.</li>
+          <li>Collaborate with design, manufacturing, analysis and quality teams.</li>
+          <li>Review and release engineering documentation, drawings and BOMs.</li>
+          <li>Support design validation, issue resolution and continuous product-improvement initiatives.</li>
+          <li>Coordinate with customer engineering teams and participate in technical discussions and design-review meetings.</li>
+          <li>Mentor team members and provide technical guidance.</li>
+          <li>Track engineering tasks and project progress while supporting schedule and quality compliance.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary>Cyient Ltd. — Senior Design Engineer</summary>
+      <div class="inside">
+        <div class="meta">23-Feb-2023 – Present • John Deere Program | Concept Design & Modeling • Hyderabad, India • Creo 4.0 / Creo 7.0</div>
+        <ul>
+          <li>Develop concept designs and models for casting components and gearbox systems.</li>
+          <li>Model gearbox child parts including shafts, pinions and gears and develop cast-iron gearbox housing designs.</li>
+          <li>Apply DFM and DFA principles to Center Module Rear Axle design for harvester-machine applications.</li>
+          <li>Develop differential-case core and cavity concepts and coordinate with foundries on manufacturability and casting quality.</li>
+          <li>Provide CAD support for drivetrain components including castings, forgings, housings, gears and shafts.</li>
+          <li>Perform skeleton modeling, Copy Geometry, Merge/Inheritance and reverse-engineering activities.</li>
+          <li>Create advanced part, assembly and surfacing models and production drawings using GD&T in accordance with ASME Y14.5:2009.</li>
+          <li>Coordinate with CAE, customer, foundry and cross-functional teams.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary>Onward Technologies Limited — Design Engineer</summary>
+      <div class="inside">
+        <div class="meta">26-Dec-2019 – 02-Dec-2022 • Caterpillar EDCI • Chennai, India • Creo 2.0 / Creo 4.0</div>
+        <ul>
+          <li>Modeled and detailed sheet-metal, rolled, casting, engine and machine-assembly components to Caterpillar standards.</li>
+          <li>Created background-group assemblies, detailed drawings and BOM balloons; managed ECNs and Notices of Revision.</li>
+          <li>Checked drawings against 1E specifications and GD&T requirements and coordinated quality checks.</li>
+          <li>Designed plastic components and performed feasibility studies with focus on functionality, manufacturability and cost.</li>
+          <li>Coordinated with suppliers, manufacturers and product-development teams throughout the design cycle.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary>GGS — Junior Design Engineer</summary>
+      <div class="inside">
+        <div class="meta">01-Feb-2019 – 31-Oct-2019 • Caterpillar EDCI • Hyderabad, India • Creo 2.0 / Creo 4.0</div>
+        <ul>
+          <li>Modeled and detailed piece parts, assemblies and group drawings in accordance with Caterpillar standards.</li>
+          <li>Developed sheet-metal components and assemblies including enclosures, brackets and structural supports.</li>
+          <li>Applied GD&T, manufacturing constraints and EDN revisions; supported LPSD/IPSD design activities.</li>
+          <li>Worked with Caterpillar drafting standards, Teamcenter, HVC processes and CAPT-to-Pro/E conversion.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary>Altimech Engineering — Junior Design Engineer</summary>
+      <div class="inside">
+        <div class="meta">07-May-2018 – 01-Feb-2019 • Armtec • Hyderabad, India • Creo 2.0</div>
+        <ul>
+          <li>Modeled components from drawings and samples and developed manufacturing-ready 3D models.</li>
+          <li>Designed die molds and electrodes, prepared CTQ lists for CMM inspection and performed reverse engineering.</li>
+          <li>Troubleshot compression, transfer and injection molds; supported GD&T, maintenance, fixtures, inspection and tool trials.</li>
+          <li>Applied Kaizen and 5S practices to support production efficiency.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="job">
+      <summary>L&T Switch Gear — Industrial Trainee</summary>
+      <div class="inside">
+        <div class="meta">July-2016 – July-2017 • Industrial Training Program • Gujarat, India</div>
+        <p>Completed a 1-year industrial training program.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section id="caterpillar">
+  <h2 class="section-title">Selected Caterpillar Programs</h2>
+  </div>
+  </div>
+  <div class="card">
+    <ul>
+      <li>Flywheel Housing – C18; Support Brackets – C18 24M / C18 / C13B; Drive Groups and sub-parts – C9.3B.</li>
+      <li>Elbows; compressor and alternator group replacement; cooling-system components; engine-mounting bracket optimization.</li>
+      <li>Deviation-request drawings, supplier-print detailing, feasibility studies, troubleshooting and prototype/field-test support.</li>
+    </ul>
+  </div>
+
+<div class="card caterpillar-visual" style="margin-top:18px;padding:14px;">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Caterpillar-797-haul-truck-the-big-mining-truck.jpg"
+       alt="Caterpillar 797 haul truck"
+       style="width:100%;max-height:430px;object-fit:cover;border-radius:10px;display:block;">
+  <div style="padding:10px 4px 2px;font-size:12px;color:#62707c;">
+    Image: Lechhabmed / Wikimedia Commons •
+    <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"
+       style="color:#0b5cad;text-decoration:underline;">CC BY-SA 4.0</a> •
+    <a href="https://en.wikipedia.org/wiki/File:Caterpillar-797-haul-truck-the-big-mining-truck.jpg"
+       target="_blank" rel="noopener" style="color:#0b5cad;text-decoration:underline;">Source</a>
+  </div>
+</div>
+
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="card">
+    <h3>Diploma in Tool and Die Making</h3>
+    <p>NTTF, Hyderabad • June 2016</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="contact-grid">
+    <a class="contact" href="mailto:eshwarj997@gmail.com"><small>Email</small>eshwarj997@gmail.com</a>
+    <a class="contact" href="tel:7729075997"><small>Phone</small>7729075997</a>
+    <a class="contact" href="tel:7016583451"><small>Phone</small>7016583451</a>
+  </div>
+  <div class="card" style="margin-top:15px">
+    <small style="color:var(--muted)">Location</small>
+    <strong>Hyderabad, India</strong>
+  </div>
+</section>
+</main>
+
+<footer>Eswar J • Technical Lead | Senior Design Engineer</footer>
+</body>
+</html>
